@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import axios from "axios";
 
 export default function CVUploader() {
@@ -13,7 +13,7 @@ export default function CVUploader() {
     formData.append("job_description", jobDesc);
     files.forEach((file) => formData.append("files", file));
 
-    const res = await axios.post("http://127.0.0.1:8000/shortlist", formData);
+    const res = await axios.post("https://kushitha-cv-shortlist.hf.space/shortlist", formData);
     setResults(res.data.shortlisted);
     setLoading(false);
   };

@@ -1,4 +1,3 @@
-import React from "react";
 import CVUploader from "./components/CVUploader";
 import "./App.css"
 
