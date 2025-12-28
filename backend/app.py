@@ -18,6 +18,11 @@ app.add_middleware(
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+@app.get("/")
+@app.head("/")
+async def root():
+    return {"status": "active"}
+
 @app.post("/shortlist")
 async def shortlist(job_description: str = Form(...), files: list[UploadFile] = File(...)):
     results = []

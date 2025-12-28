@@ -1,12 +1,8 @@
-import CVUploader from "./components/CVUploader";
-import "./App.css"
+import ChatbotUI from "./components/ChatbotUI";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <CVUploader />
-    </div>
-  );
+  return <ChatbotUI />;
 }
 
 export default App;
