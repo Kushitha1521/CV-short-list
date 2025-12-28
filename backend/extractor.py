@@ -8,6 +8,8 @@ def extract_text(file_path):
             for page in pdf.pages:
                 text += page.extract_text() or ""
         return text
+
     elif file_path.endswith(".docx"):
         return docx2txt.process(file_path)
+
     return ""
